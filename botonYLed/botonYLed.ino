@@ -1,6 +1,6 @@
 
 int ledPin = 12;
-int botonPin = 14;
+int botonPin = 10;
 void setup() {
   // put your setup code here, to run once:
 
@@ -13,7 +13,6 @@ void loop() {
   if(digitalRead(botonPin) == 0){
     Serial.println("Boton 1 == 1");
       digitalWrite(ledPin, HIGH);
-    }
   }else{
     Serial.println("Boton 1 == 0");
     digitalWrite(ledPin, LOW);
