@@ -62,6 +62,7 @@ void loop() {
   if(cont == 0){
     //Leer el estado del Movimiento
     long statePir = digitalRead(sensorPin);
+    Firebase.setLong("Movimiento",statePir);
     if(statePir == LOW){
       lcd.print("No me muevo");
       }else{
