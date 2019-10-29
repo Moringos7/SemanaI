@@ -17,10 +17,18 @@ void setup() {
 
   lcd.home();
   lcd.setCursor(2,2);
-  lcd.print("Hola Mundo");
 }
 
 void loop() {
   // put your main code here, to run repeatedly:
+
+  int luz=analogRead(A0);
+  luz=map(luz,650,10,100,0);
+  lcd.setCursor(2,2);
+  lcd.print(luz);
+  delay(100);
+  lcd.clear();
+
+  Serial.println(luz);
 
 }
