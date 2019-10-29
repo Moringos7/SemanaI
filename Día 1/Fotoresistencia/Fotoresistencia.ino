@@ -19,7 +19,6 @@ void setup() {
   Serial.print("");
   Serial.print("Wifi Connected");
   Firebase.begin(FIREBASE_HOST,FIREBASE_AUTH);
-  Firebase.setInt("Foco",1);
   
 }
 
@@ -27,5 +26,6 @@ void loop() {
   // put your main code here, to run repeatedly:
   int luz=analogRead(A0);
   luz=map(luz,650,10,100,0);
+  Firebase.setInt("Luz",luz);
   Serial.println(luz);
 }
