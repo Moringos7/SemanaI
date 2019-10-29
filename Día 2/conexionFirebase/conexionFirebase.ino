@@ -1,6 +1,11 @@
-void setup() {
-  // put your setup code here, to run once:
+#define FIREBASE_HOST "reto-2-semana-i.firebaseio.com/"
+#define FIREBASE_AUTH
+#define WIFI__SSID "Tec_IoT"
+#define WIFI_PASSWORD "spotless.magnetic.bridge"
 
+
+void setup() {
+  
 }
 
 void loop() {
