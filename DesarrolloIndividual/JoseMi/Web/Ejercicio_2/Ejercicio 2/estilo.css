@@ -1,0 +1,31 @@
+h1{
+	color:	#1E90FF;
+	text-align: center;
+}
+
+body{
+	background-color: #E0FFFF;
+	color:#696969;
+
+}
+
+p,div{
+	font-size: 15px;
+	font-family: Verdana;
+}
+
+.btn-lg{
+	font-size: 20px;
+}
+
+#btn2{
+	padding: 20px;
+}
+
+table, th,td,tr{
+	padding: 5px;
+	border: 2px black solid;
+}
+ul{
+	list-style-type: decimal;| 
+}
