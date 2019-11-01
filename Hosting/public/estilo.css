@@ -1,5 +1,7 @@
 body{
 	background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+	/* background-color: #BA0000!important; */
+	background-repeat: no-repeat;
 }
 /*Colores para los slides*/
 

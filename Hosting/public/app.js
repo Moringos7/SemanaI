@@ -44,10 +44,6 @@ auth.onAuthStateChanged(function(user) {
   if (user) {
     $("#divInicio").addClass("collapse");
     $("#divControles").removeClass("collapse");
-    fb_luz.on("value", function(snapshot) {
-      console.log("Me estoy cambiando");
-      luz.innerHTML = snapshot.val().Luz + " % de luz";
-    });
     //Escribimos en firebase los valores obtenidos con los listeners
     var fb_rele1 = firebase
       .database()
