@@ -12,7 +12,6 @@ var firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 
 //Getter de valores a través de los ID asignados
-var rele1 = document.getElementById("toogle1");
 var luz = document.getElementById("luz");
 var movimiento = document.getElementById("movimiento");
 var salir = document.getElementById("btnSalir");
@@ -45,39 +44,34 @@ auth.onAuthStateChanged(function(user) {
     $("#divInicio").addClass("collapse");
     $("#divControles").removeClass("collapse");
     //Escribimos en firebase los valores obtenidos con los listeners
-    var fb_rele1 = firebase
-      .database()
-      .ref()
-      .child("rele1");
-
-    var fb_temperatura = firebase
-      .database()
-      .ref()
-      .child("temperatura");
-    var fb_movimiento = firebase
-      .database()
-      .ref()
-      .child("movimiento");
-    var fb_presencia = firebase
-      .database()
-      .ref()
-      .child("presencia");
+    // var fb_temperatura = firebase
+    //   .database()
+    //   .ref()
+    //   .child("temperatura");
+    // var fb_movimiento = firebase
+    //   .database()
+    //   .ref()
+    // //   .child("movimiento");
+    // var fb_presencia = firebase
+    //   .database()
+    //   .ref()
+    //   .child("presencia");
     var fb_luz = firebase
       .database()
       .ref()
-      .child("luz");
-    var fb_red = firebase
-      .database()
-      .ref()
-      .child("red");
-    var fb_green = firebase
-      .database()
-      .ref()
-      .child("green");
-    var fb_blue = firebase
-      .database()
-      .ref()
-      .child("blue");
+      .child("Luz");
+    // var fb_red = firebase
+    //   .database()
+    //   .ref()
+    //   .child("red");
+    // var fb_green = firebase
+    //   .database()
+    //   .ref()
+    //   .child("green");
+    // var fb_blue = firebase
+    //   .database()
+    //   .ref()
+    //   .child("blue");
 
     //Variables para relevadores
     var t1 = 0;
@@ -101,21 +95,6 @@ auth.onAuthStateChanged(function(user) {
     rele1.addEventListener("click", function() {
       if (t1 == 1) fb_rele1.set(0);
       else fb_rele1.set(1);
-    });
-
-    //Bloque de Slider
-    var slider1 = new Slider("#ex1", {
-      formatter: function(value) {
-        return "Current value: " + value;
-      }
-    });
-
-    fb_red.on("value", function(snapshot) {
-      slider1.setValue(snapshot.val());
-    });
-
-    slider1.on("slideStop", function() {
-      fb_red.set(slider1.getValue());
     });
 
     //Bloque card - Sensores
