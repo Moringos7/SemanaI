@@ -53,19 +53,7 @@ auth.onAuthStateChanged(function(user) {
   if (user) {
     $("#divInicio").addClass("collapse");
     $("#divControles").removeClass("collapse");
-    //Escribimos en firebase los valores obtenidos con los listeners
-    // var fb_temperatura = firebase
-    //   .database()
-    //   .ref()
-    //   .child("temperatura");
-    // var fb_movimiento = firebase
-    //   .database()
-    //   .ref()
-    // //   .child("movimiento");
-    // var fb_presencia = firebase
-    //   .database()
-    //   .ref()
-    //   .child("presencia");
+
     var fb_luz = firebase
       .database()
       .ref()
@@ -91,38 +79,7 @@ auth.onAuthStateChanged(function(user) {
     .database()
     .ref()
     .child("Ventana");
-    // var fb_red = firebase
-    //   .database()
-    //   .ref()
-    //   .child("red");
-    // var fb_green = firebase
-    //   .database()
-    //   .ref()
-    //   .child("green");
-    // var fb_blue = firebase
-    //   .database()
-    //   .ref()
-    //   .child("blue");
 
-    //Variables para relevadores
-    var t1 = 0;
-
-    //Bloque de Botones - Reley's
-    // fb_rele1.on("value", function(snapshot) {
-    //   /*Cambiará el aspecto del botón según el valor a través de las clases
-    //         para dar un aspecto de activo */
-    //   if (snapshot.val() == 1) {
-    //     $("#toogle1")
-    //       .removeClass("btn-default")
-    //       .addClass("btn-success");
-    //     t1 = 1;
-    //   } else {
-    //     $("#toogle1")
-    //       .removeClass("btn-success")
-    //       .addClass("btn-default");
-    //     t1 = 0;
-    //   }
-    // });
     rele1.addEventListener("click", function() {
       fb_rele1.set(1);
     });
@@ -131,7 +88,6 @@ auth.onAuthStateChanged(function(user) {
       fb_rele1.set(0);
     });
 
-    //Bloque card - Sensores
 
     //!Setter en html que si funcionan
     fb_luz.on("value", function(snapshot) {
@@ -176,19 +132,6 @@ auth.onAuthStateChanged(function(user) {
       }
     });
 
-    // fb_movimiento.on("value", function(snapshot) {
-    //   if (snapshot.val() == 1) {
-    //     movimiento.innerHTML = "Hay Movimiento";
-    //     $("#cardM")
-    //       .addClass("bg-info")
-    //       .addClass("text-white");
-    //   } else {
-    //     movimiento.innerHTML = "No hay Movimiento";
-    //     $("#cardM")
-    //       .removeClass("bg-info")
-    //       .removeClass("text-white");
-    //   }
-    // });
   } else {
     // Cuando no se ha hecho login, solo muestra esta sección
     $("#divControles").addClass("collapse");

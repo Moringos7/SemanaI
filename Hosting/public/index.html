@@ -1,101 +1,129 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <!-- Required meta tags -->
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
 
     <!-- Configuración responsive -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
     <!-- Nuestro CSS-->
-    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="estilo.css" />
 
-    <title>Proyecto Semana i</title>
+    <title>Tesla Motors</title>
   </head>
   <body>
     <div class="container">
-      <div class="header clearfix">
-        <hr>
-          <h3 class="text-muted">IOT - Semana i</h3>
-        <hr>
-      </div>
       <div class="jumbotron text-center">
-        <h1>Tesla</h1>
+        <h1>Sistema de Seguridas Y Comodidad</h1>
       </div>
       <div id="divControles">
-        <div class="row">
-          <div class="offset-sm-2 col-sm-4 text-center p-3" >
-            <button id="rele1" type="button" class="btn btn-warning">Apagar Aire</button></div>
-            <button id="rele2" type="button" class="btn btn-primary">Encender Aire</button></div>
-        </div><!-- row -->
-        <div class="row">
-          <div class="text-center p-4 offset-md-3 col-md-4 offset-sm-1 col-sm-5">
-            <div class="card text-white bg-warning">
-              <div class="card-header">Luz</div>
-              <div class="card-body">
-                <p class="card-text" id="luz">Luz</p>
-              </div>
-            </div>
-          </div>
-
+        <div class="row justify-content-center">
+          <button id="rele1" type="button" class="btn btn-secondary">
+            Apagar Aire
+          </button>
+          <button id="rele2" type="button" class="btn btn-success">
+            Encender Aire
+          </button>
+        </div>
+        <div class="row justify-content-center">
           <div class="text-center p-3 col-md-4 col-sm-5">
-            <div class="card text-white bg-primary" id="cardM">
+            <div class="card text-white bg-danger" id="cardM">
               <div class="card-header">Distancia Frente</div>
               <div class="card-body">
                 <p class="card-text" id="distancia-frente">Movimiento</p>
               </div>
             </div>
-          </div>
-
-          <div class="text-center p-3 col-md-4 col-sm-5">
             <div class="card text-white bg-warning" id="cardM">
-              <div class="card-header">Temperatura</div>
-              <div class="card-body">
-                <p class="card-text" id="temperatura">temperatura</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="text-center p-3 col-md-4 col-sm-5">
-            <div class="card text-white bg-info" id="cardM">
               <div class="card-header">Distancia Atras</div>
               <div class="card-body">
                 <p class="card-text" id="distancia-atras">distancia</p>
               </div>
             </div>
           </div>
-        </div><!-- row -->
+
+          <div class="text-center p-3 col-md-4 col-sm-5">
+            <div class="card text-white bg-info" id="cardM">
+              <div class="card-header">Temperatura</div>
+              <div class="card-body">
+                <p class="card-text" id="temperatura">temperatura</p>
+              </div>
+            </div>
+            <div class="card text-black bg-light">
+              <div class="card-header">Luz</div>
+              <div class="card-body">
+                <p class="card-text" id="luz">Luz</p>
+              </div>
+            </div>
+          </div>
+        </div>
 
         <div class="text-center m-4">
-          <button type="button" id="btnSalir" class="btn btn-dark">Cerrar Sesión</button>
+          <button type="button" id="btnSalir" class="btn btn-dark">
+            Cerrar Sesión
+          </button>
         </div>
-      </div><!-- controles -->
+      </div>
+      <!-- controles -->
       <div id="divInicio">
         <div class="py-2">
-          <label for="inputEmail" class="control-label" >Correo</label>
-          <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+          <label for="inputEmail" class="control-label">Correo</label>
+          <input
+            type="email"
+            class="form-control"
+            id="inputEmail"
+            placeholder="Email"
+          />
         </div>
         <div class="py-2">
-          <label for="inputPassword" class="control-label" >Contraseña</label>
-          <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+          <label for="inputPassword" class="control-label">Contraseña</label>
+          <input
+            type="password"
+            class="form-control"
+            id="inputPassword"
+            placeholder="Password"
+          />
         </div>
         <div class="py-4">
-          <button type="button" id="btnInicio" class="btn btn-dark">Iniciar Sesión</button>
+          <button type="button" id="btnInicio" class="btn btn-dark">
+            Iniciar Sesión
+          </button>
         </div>
-      </div><!-- inicio -->
-    </div><!-- container -->
+      </div>
+      <!-- inicio -->
+    </div>
+    <!-- container -->
 
     <!-- CDN Firebase JS -->
     <script src="https://www.gstatic.com/firebasejs/5.5.1/firebase.js"></script>
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+      crossorigin="anonymous"
+    ></script>
 
     <!-- Nuestro JS -->
     <script src="app.js"></script>
-
   </body>
 </html>

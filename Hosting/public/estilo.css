@@ -1,7 +1,10 @@
 body{
-	background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
-	/* background-color: #BA0000!important; */
-	background-repeat: no-repeat;
+	background-color:azure;
+	align-content: center !important;
+	align-items: center !important;
+}
+.jumbotron{
+	background-color:transparent !important;
 }
 /*Colores para los slides*/
 
